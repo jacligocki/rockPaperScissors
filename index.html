@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <script>
+        function game (playerSelection, computerPlay) {
+//For rock //
+            if (playerSelection == "rock" && computerPlay == 1) {
+                    alert("Computer chose paper. You lose!");
+                }
+                else if (playerSelection == "rock" && computerPlay == 0) {
+                    alert("Computer chose rock. It's a draw!")
+                } else if (playerSelection == "rock" && computerPlay == 2) {
+                    alert("Computer chose scissors. You win!")
+                }
+// For paper //
+                else if (playerSelection == "paper" && computerPlay == 1) {
+                    alert("Computer chose paper. It's a draw!")
+                }
+                else if (playerSelection == "paper" && computerPlay == 0) {
+                    alert("Computer chose rock. You win!")
+                } else if (playerSelection == "paper" && computerPlay == 2) {
+                    alert("Computer chose scissors. You lose!")
+                }
+// For scissors //
+                else if (playerSelection == "scissors" && computerPlay == 1) {
+                    alert("Computer chose paper. You win!")
+                }
+                else if (playerSelection == "scissors" && computerPlay == 0) {
+                    alert("Computer chose rock. You lose!")
+                } else if (playerSelection == "scissors" && computerPlay == 2) {
+                    alert("Computer chose scissors. It's a draw!")
+                }
+
+    }
+
+
+        function computerPlay () {
+           let randomNum = Math.floor(Math.random() * Math.floor(3));
+
+            //    0 = rock 
+            //    1 = paper 
+            //    2 = scissors
+
+            return randomNum;                            
+        }
+
+        game(prompt("Rock, Paper or Scissors?").toLowerCase(), computerPlay())
+
+    </script>
+    
+</body>
+</html>
